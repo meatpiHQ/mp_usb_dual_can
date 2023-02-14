@@ -24,8 +24,8 @@ else
 fi
 
 # Create the second file and add the content
-echo 'SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="11fd", ENV{ID_USB_INTERFACE_NUM}=="00", SYMLINK+="MP-CAN0"
-SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="11fd", ENV{ID_USB_INTERFACE_NUM}=="02", SYMLINK+="MP-CAN1"' \
+echo 'SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="11fd", ENV{ID_USB_INTERFACE_NUM}=="00", SYMLINK+="MP-CAN1"
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="11fd", ENV{ID_USB_INTERFACE_NUM}=="02", SYMLINK+="MP-CAN2"' \
   | sudo tee /etc/udev/rules.d/99-usb-serial.rules
 
 # Check if the second file was created successfully
