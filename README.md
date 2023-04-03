@@ -6,7 +6,20 @@
 
 ![image](https://user-images.githubusercontent.com/94690098/218752989-d5006863-8b0d-4659-a94b-8a14d78d0261.png)
 
-## 1. SocketCAN  
+## 1. Flash new Firmware:
+
+![image](https://user-images.githubusercontent.com/94690098/146773960-5d2bcb26-4532-49b1-88ed-c5d18794a0c0.png)
+
+There are 2 avilable firmwares, socketCAN and ReadDash. 
+Download mpFlasher Tool. [**Link**](https://drive.google.com/drive/folders/1ZuAvOhjXHvq5TKOJofSgyZFOzkQ3mTIc)
+1. While pressing the push button, plug in the USB-C cable.
+2. Both LEDs should start blinking
+3. Once in DFU mode, the device will appear as "USB Serial Device"
+4. If you have multiple USB Serial devices connected make sure to choose the right one
+5. Click the "Three Dots" button to select the firmware file
+6. Then Click flash button. 
+
+## 2. SocketCAN  
 
 SocketCAN is a Linux-based socket interface for CAN bus communication. It provides a standardized API for accessing CAN hardware and a set of utilities for working with CAN devices. SocketCAN supports multiple CAN controllers and can handle different types of CAN buses, such as CAN 2.0A and CAN 2.0B.
 
@@ -22,19 +35,20 @@ sudo ifconfig can1 txqueuelen 1000;sudo ifconfig can2 txqueuelen 1000
 sudo ifconfig can1 up; sudo ifconfig can2 up
 ```
 
-## 2. API
+## 3. API
 
 [**API LabView, C#, VB.Net, Delphi, Python - Programming Examples**](https://github.com/meatpiHQ/programming_examples/tree/master/CAN)
 
-## 3. BUSMaster
-You need to download the right version of BUSMaster provided in the [**Link**](https://drive.google.com/drive/folders/1lIDeNdrtg5cKzxp8Q8V94phF8vOllHDk) above. Here is how to setup the hardware. **Remember to set both Acceptance Code and Mask to '00000000'.**
+[**Api Documentation**](https://drive.google.com/drive/folders/1ZuAvOhjXHvq5TKOJofSgyZFOzkQ3mTIc)
+
+## 4. BUSMaster
+You need to download the right version of BUSMaster provided in the [**Link**](https://drive.google.com/drive/folders/1ZuAvOhjXHvq5TKOJofSgyZFOzkQ3mTIc) above. Here is how to setup the hardware. 
 1. Select VSCom CAN-API by clicking on 'Driver Selection -> VSCom CAN-API"
 2. Then Click on 'Channel Configuration -> Advanced' 
 3. Click on 'Search for Devices on COM-Ports', the device should appear in the drop downlist or fill the right COM port number
 4. Check the 'Hardware Timestamps' check box.
 5. Choose the Baudrate.
-6. **Most importantly set both Acceptance Code and Mask to '00000000'**.
-7. Click 'OK', then Click the Connect button on the top left corner.
+6. Click 'OK', then Click the Connect button on the top left corner.
 
 ![image](https://user-images.githubusercontent.com/94690098/152467965-3bc36968-4de3-470f-bf0e-b39237e86d7f.png)
 
