@@ -6,6 +6,10 @@
 
 ![image](https://user-images.githubusercontent.com/94690098/218752989-d5006863-8b0d-4659-a94b-8a14d78d0261.png)
 
+
+- [Flash new Firmware](https://github.com/meatpiHQ/mp_usb_dual_can#1-flash-new-firmware)
+- [SocketCAN](https://github.com/meatpiHQ/mp_usb_dual_can#2-socketcan)
+
 ## 1. Flash new Firmware:
 
 ![image](https://user-images.githubusercontent.com/94690098/146773960-5d2bcb26-4532-49b1-88ed-c5d18794a0c0.png)
@@ -35,13 +39,30 @@ sudo ifconfig can1 txqueuelen 1000;sudo ifconfig can2 txqueuelen 1000
 sudo ifconfig can1 up; sudo ifconfig can2 up
 ```
 
-## 3. API
+## 3. RealDash
+
+Make sure to flash [realdash firmware first](https://github.com/meatpiHQ/mp_usb_dual_can#1-flash-new-firmware)
+
+CAN bitrate can be set for each channel independently using the jumpers. The supported bitrate are 250K, 500K, 800K and 1000K.
+
+The realdash firmware multiplex both CAN1 and CAN2 into a single channel USB-Serial channel. Which means any CAN frame recived on CAN1 or CAN2 is sent to the same USB-Serial channel and any frmware send from the USB-Serial is sent on both channels.
+
+1. Go to garage then click on the dashboard.
+2. Click Add connection.
+3. Select Adapter (CAN/LIN)
+4. Select RealDash CAN
+5. Select SERIAL/USB
+6. Then select "MeatPi Dual CAN" from the list.
+7. Ignor the Baud Rate here has no effect here.
+8. Then click Done.
+
+## 4. API
 
 [**API LabView, C#, VB.Net, Delphi, Python - Programming Examples**](https://github.com/meatpiHQ/programming_examples/tree/master/CAN)
 
 [**Api Documentation**](https://drive.google.com/drive/folders/1ZuAvOhjXHvq5TKOJofSgyZFOzkQ3mTIc)
 
-## 4. BUSMaster
+## 5. BUSMaster
 You need to download the right version of BUSMaster provided in the [**Link**](https://drive.google.com/drive/folders/1ZuAvOhjXHvq5TKOJofSgyZFOzkQ3mTIc) above. Here is how to setup the hardware. 
 1. Select VSCom CAN-API by clicking on 'Driver Selection -> VSCom CAN-API"
 2. Then Click on 'Channel Configuration -> Advanced' 
