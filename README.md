@@ -56,7 +56,7 @@ CAN bitrate can be set for each channel independently using the jumpers. The sup
 
 
 
-The realdash firmware multiplex both CAN1 and CAN2 into a single channel USB-Serial channel. Which means any CAN frame recived on CAN1 or CAN2 is sent to the same USB-Serial channel and any frmware send from the USB-Serial is sent on both channels.
+The realdash firmware multiplex both CAN1 and CAN2 into a single channel USB-Serial channel. Which means any CAN frame received on CAN1 or CAN2 is sent to the same USB-Serial channel and any frmware send from the USB-Serial is sent on both channels.
 
 1. Go to garage then click on the dashboard.
 2. Click Add connection.
