@@ -52,6 +52,10 @@ Make sure to flash [realdash firmware first](https://github.com/meatpiHQ/mp_usb_
 
 CAN bitrate can be set for each channel independently using the jumpers. The supported bitrate are 250K, 500K, 800K and 1000K.
 
+![image](https://user-images.githubusercontent.com/94690098/229812082-129e5134-5d1b-43a9-be67-ed7c9432925f.png)
+
+
+
 The realdash firmware multiplex both CAN1 and CAN2 into a single channel USB-Serial channel. Which means any CAN frame recived on CAN1 or CAN2 is sent to the same USB-Serial channel and any frmware send from the USB-Serial is sent on both channels.
 
 1. Go to garage then click on the dashboard.
