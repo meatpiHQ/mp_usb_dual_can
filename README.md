@@ -45,6 +45,20 @@ sudo slcand -o -s6 /dev/MP-CAN1 can1; sudo slcand -o -s6 /dev/MP-CAN2 can2   # s
 sudo ifconfig can1 txqueuelen 1000;sudo ifconfig can2 txqueuelen 1000
 sudo ifconfig can1 up; sudo ifconfig can2 up
 ```
+Speed commands:
+```
+s1: 20 KBit
+s2: 50 KBit
+s3: 100 KBit
+s4: 125 KBit
+s5: 250 KBit
+s6: 500 KBit
+s7: 800 KBit
+s8: 1 MBit
+```
+
+
+
 
 ## 3. RealDash
 
